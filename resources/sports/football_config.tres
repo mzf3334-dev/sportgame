@@ -1,0 +1,37 @@
+[gd_resource type="SportConfig" script_class="SportConfig" format=3]
+
+[resource]
+sport_name = "Football"
+sport_type = 1
+field_size = Vector2(1000, 600)
+player_count = 2
+max_players = 4
+game_duration = 600.0
+rules = {
+"overtime_enabled": true,
+"score_limit": 0,
+"time_limit": true
+}
+assets_path = "res://assets/sports/football/"
+field_scene_path = "res://scenes/sports/FootballField.tscn"
+gravity = Vector2(0, 980)
+ball_bounce = 0.6
+ball_friction = 0.2
+scoring_rules = {
+"basic_score": 1,
+"bonus_multiplier": 1.0
+}
+win_conditions = {
+"score_to_win": 5,
+"time_based": true
+}
+special_rules = ["offside", "corner_kicks", "penalty_kicks"]
+field_color = Color(0.2, 0.8, 0.2, 1)
+ui_theme_path = "res://themes/football_theme.tres"
+background_music_path = "res://assets/audio/football_bg.ogg"
+sound_effects = {
+"kick": "res://assets/audio/ball_kick.ogg",
+"crowd_cheer": "res://assets/audio/crowd_cheer.ogg",
+"score": "res://assets/audio/score_football.ogg",
+"whistle": "res://assets/audio/whistle.ogg"
+}

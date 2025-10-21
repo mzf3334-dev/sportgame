@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqm8xvn2qwqyh"]
+
+[ext_resource type="Script" path="res://scripts/ui/VirtualButton.gd" id="1_0hdqr"]
+
+[node name="VirtualButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 80.0
+offset_bottom = 80.0
+script = ExtResource("1_0hdqr")

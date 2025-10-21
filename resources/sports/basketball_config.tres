@@ -1,0 +1,38 @@
+[gd_resource type="SportConfig" script_class="SportConfig" format=3]
+
+[resource]
+sport_name = "Basketball"
+sport_type = 0
+field_size = Vector2(800, 600)
+player_count = 2
+max_players = 4
+game_duration = 300.0
+rules = {
+"overtime_enabled": true,
+"score_limit": 0,
+"time_limit": true
+}
+assets_path = "res://assets/sports/basketball/"
+field_scene_path = "res://scenes/sports/BasketballField.tscn"
+gravity = Vector2(0, 980)
+ball_bounce = 0.8
+ball_friction = 0.1
+scoring_rules = {
+"basic_score": 2,
+"bonus_multiplier": 1.5,
+"three_point_score": 3
+}
+win_conditions = {
+"score_to_win": 21,
+"time_based": true
+}
+special_rules = ["three_point_line", "free_throws", "rebounds"]
+field_color = Color(0.8, 0.4, 0.2, 1)
+ui_theme_path = "res://themes/basketball_theme.tres"
+background_music_path = "res://assets/audio/basketball_bg.ogg"
+sound_effects = {
+"bounce": "res://assets/audio/ball_bounce.ogg",
+"crowd_cheer": "res://assets/audio/crowd_cheer.ogg",
+"score": "res://assets/audio/score_basketball.ogg",
+"whistle": "res://assets/audio/whistle.ogg"
+}

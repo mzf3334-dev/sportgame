@@ -1,0 +1,37 @@
+[gd_resource type="SportConfig" script_class="SportConfig" format=3]
+
+[resource]
+sport_name = "Tennis"
+sport_type = 2
+field_size = Vector2(600, 400)
+player_count = 2
+max_players = 2
+game_duration = 1800.0
+rules = {
+"overtime_enabled": false,
+"score_limit": 0,
+"time_limit": false
+}
+assets_path = "res://assets/sports/tennis/"
+field_scene_path = "res://scenes/sports/TennisField.tscn"
+gravity = Vector2(0, 980)
+ball_bounce = 0.9
+ball_friction = 0.05
+scoring_rules = {
+"basic_score": 1,
+"bonus_multiplier": 1.0
+}
+win_conditions = {
+"score_to_win": 6,
+"time_based": false
+}
+special_rules = ["deuce", "advantage", "sets"]
+field_color = Color(0.2, 0.6, 0.8, 1)
+ui_theme_path = "res://themes/tennis_theme.tres"
+background_music_path = "res://assets/audio/tennis_bg.ogg"
+sound_effects = {
+"hit": "res://assets/audio/racket_hit.ogg",
+"crowd_cheer": "res://assets/audio/crowd_cheer.ogg",
+"score": "res://assets/audio/score_tennis.ogg",
+"whistle": "res://assets/audio/whistle.ogg"
+}
