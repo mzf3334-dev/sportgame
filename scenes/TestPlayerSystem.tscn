@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://btest123456789"]
+
+[ext_resource type="Script" path="res://scripts/TestPlayerSystem.gd" id="1_test"]
+
+[node name="TestPlayerSystem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_test")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.1, 0.2, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Player System Test"
+horizontal_alignment = 1
+
+[node name="PlayerInfoLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Player Info will appear here"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TestDataButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Test Player Data"
+
+[node name="TestSkillsButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Test Skills"
+
+[node name="TestEquipmentButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Test Equipment"
+
+[node name="OpenCustomizationButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Open Character Customization"
+
+[node name="OpenSkillTreeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Open Skill Tree"
+
+[node name="ResultsLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Test results will appear here..."

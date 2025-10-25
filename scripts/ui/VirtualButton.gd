@@ -136,7 +136,7 @@ func handle_mouse_input(event: InputEventMouseButton) -> void:
 			end_button_press()
 
 func _on_touch_started(id: int, position: Vector2) -> void:
-	var local_pos = to_local(position)
+	var local_pos = global_position - position
 	if get_rect().has_point(local_pos) and not is_pressed and is_enabled:
 		start_button_press(id, local_pos)
 

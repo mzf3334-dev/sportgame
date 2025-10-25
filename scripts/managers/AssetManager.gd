@@ -185,13 +185,9 @@ func get_sport_asset_paths(sport_type: GameManager.SportType) -> Array[String]:
 
 func get_memory_usage_mb() -> float:
 	"""Get current memory usage in MB"""
-	var memory_usage = OS.get_static_memory_usage_by_type()
-	var total_mb = 0.0
-	
-	for usage in memory_usage.values():
-		total_mb += float(usage) / (1024.0 * 1024.0)
-	
-	return total_mb
+	# In Godot 4.x, use OS.get_static_memory_usage() instead
+	var memory_usage = OS.get_static_memory_usage()
+	return float(memory_usage) / (1024.0 * 1024.0)
 
 func trigger_garbage_collection() -> void:
 	"""Force garbage collection to free memory"""

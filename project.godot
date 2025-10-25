@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Sports 2D Game"
 config/description="A 2D sports game with multiple sports and network multiplayer"
-run/main_scene="res://scenes/Main.tscn"
+run/main_scene="res://scenes/BasketballDemo.tscn"
 config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="res://icon.svg"

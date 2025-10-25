@@ -119,7 +119,7 @@ func handle_mouse_drag(event: InputEventMouseMotion) -> void:
 
 func _on_touch_started(id: int, position: Vector2) -> void:
 	# Handle touch events from InputController
-	var local_pos = to_local(position)
+	var local_pos = global_position - position
 	if get_rect().has_point(local_pos) and not is_pressed:
 		start_joystick_input(id, local_pos)
 
@@ -129,7 +129,7 @@ func _on_touch_ended(id: int, position: Vector2) -> void:
 
 func _on_touch_moved(id: int, position: Vector2, relative: Vector2) -> void:
 	if is_pressed and id == touch_id:
-		var local_pos = to_local(position)
+		var local_pos = global_position - position
 		update_joystick_position(local_pos)
 
 func start_joystick_input(id: int, position: Vector2) -> void:

@@ -152,13 +152,9 @@ func reduce_update_frequencies() -> void:
 
 func get_memory_usage_mb() -> float:
 	"""Get current memory usage in MB"""
-	var memory_usage = OS.get_static_memory_usage_by_type()
-	var total_mb = 0.0
-	
-	for usage in memory_usage.values():
-		total_mb += float(usage) / (1024.0 * 1024.0)
-	
-	return total_mb
+	# In Godot 4.x, use OS.get_static_memory_usage() instead
+	var memory_usage = OS.get_static_memory_usage()
+	return float(memory_usage) / (1024.0 * 1024.0)
 
 func get_performance_stats() -> Dictionary:
 	"""Get current performance statistics"""

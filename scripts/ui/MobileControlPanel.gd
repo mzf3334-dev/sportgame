@@ -56,7 +56,8 @@ func setup_control_panel() -> void:
 	create_secondary_buttons()
 
 func create_virtual_joystick() -> void:
-	virtual_joystick = preload("res://scripts/ui/VirtualJoystick.gd").new()
+	virtual_joystick = Control.new()
+	virtual_joystick.set_script(preload("res://scripts/ui/VirtualJoystick.gd"))
 	virtual_joystick.name = "VirtualJoystick"
 	virtual_joystick.size = Vector2(140, 140)
 	virtual_joystick.position = Vector2(joystick_position.x, size.y + joystick_position.y - virtual_joystick.size.y)
@@ -79,7 +80,8 @@ func create_action_buttons() -> void:
 	]
 	
 	for config in button_configs:
-		var button = preload("res://scripts/ui/VirtualButton.gd").new()
+		var button = Control.new()
+		button.set_script(preload("res://scripts/ui/VirtualButton.gd"))
 		button.name = "Button_" + config.name
 		button.button_name = config.name
 		button.button_text = config.text
@@ -104,7 +106,8 @@ func create_secondary_buttons() -> void:
 	]
 	
 	for config in secondary_configs:
-		var button = preload("res://scripts/ui/VirtualButton.gd").new()
+		var button = Control.new()
+		button.set_script(preload("res://scripts/ui/VirtualButton.gd"))
 		button.name = "SecondaryButton_" + config.name
 		button.button_name = config.name
 		button.button_text = config.text
